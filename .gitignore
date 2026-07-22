@@ -1,0 +1,45 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Playwright
+playwright-report/
+test-results/
+
+# Allure
+allure-results/
+allure-report/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Ruff
+.ruff_cache/
+
+# Mypy
+.mypy_cache/
+
+# Logs
+*.log
+
+# Build
+dist/
+build/

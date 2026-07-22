@@ -1,0 +1,16 @@
+playwright
+pytest
+pytest-playwright
+pytest-xdist
+pytest-bdd
+allure-pytest
+python-dotenv
+pydantic
+pydantic-settings
+jsonschema
+requests
+ruff
+black
+mypy
+pytest-cov
+axe-playwright-python
