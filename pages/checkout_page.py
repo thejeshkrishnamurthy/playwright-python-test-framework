@@ -7,15 +7,9 @@ class CheckoutPage(BasePage):
     def __init__(self, page: Page) -> None:
         super().__init__(page)
 
-        self.first_name: Locator = page.locator(
-            "[data-test='firstName']"
-        )
-        self.last_name: Locator = page.locator(
-            "[data-test='lastName']"
-        )
-        self.postal_code: Locator = page.locator(
-            "[data-test='postalCode']"
-        )
+        self.first_name: Locator = page.locator("[data-test='firstName']")
+        self.last_name: Locator = page.locator("[data-test='lastName']")
+        self.postal_code: Locator = page.locator("[data-test='postalCode']")
         self.continue_button: Locator = page.get_by_role(
             "button",
             name="Continue",

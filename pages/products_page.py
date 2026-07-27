@@ -7,15 +7,9 @@ class ProductsPage(BasePage):
     def __init__(self, page: Page) -> None:
         super().__init__(page)
 
-        self.title: Locator = page.locator(
-            "[data-test='title']"
-        )
-        self.inventory_items: Locator = page.locator(
-            "[data-test='inventory-item']"
-        )
-        self.cart_link: Locator = page.locator(
-            "[data-test='shopping-cart-link']"
-        )
+        self.title: Locator = page.locator("[data-test='title']")
+        self.inventory_items: Locator = page.locator("[data-test='inventory-item']")
+        self.cart_link: Locator = page.locator("[data-test='shopping-cart-link']")
         self.sort_dropdown: Locator = page.locator(
             "[data-test='product-sort-container']"
         )
@@ -24,9 +18,7 @@ class ProductsPage(BasePage):
         self,
         product_name: str,
     ) -> None:
-        product = self.inventory_items.filter(
-            has_text=product_name
-        )
+        product = self.inventory_items.filter(has_text=product_name)
 
         product.get_by_role(
             "button",

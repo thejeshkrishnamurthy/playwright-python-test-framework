@@ -7,7 +7,6 @@ from pages.login_page import LoginPage
 from pages.products_page import ProductsPage
 from utils.config import get_settings
 
-
 settings = get_settings()
 
 
@@ -27,14 +26,10 @@ def test_customer_can_complete_checkout(
         settings.standard_password,
     )
 
-    products_page.add_product_to_cart(
-        "Sauce Labs Backpack"
-    )
+    products_page.add_product_to_cart("Sauce Labs Backpack")
     products_page.open_cart()
 
-    expect(
-        cart_page.product("Sauce Labs Backpack")
-    ).to_be_visible()
+    expect(cart_page.product("Sauce Labs Backpack")).to_be_visible()
 
     cart_page.checkout()
 
@@ -46,8 +41,4 @@ def test_customer_can_complete_checkout(
 
     checkout_page.finish_order()
 
-    expect(
-        checkout_page.confirmation_header
-    ).to_have_text(
-        "Thank you for your order!"
-    )
+    expect(checkout_page.confirmation_header).to_have_text("Thank you for your order!")

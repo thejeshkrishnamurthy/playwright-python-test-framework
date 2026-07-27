@@ -13,9 +13,7 @@ class LoginPage(BasePage):
             "button",
             name="Login",
         )
-        self.error_message: Locator = page.locator(
-            "[data-test='error']"
-        )
+        self.error_message: Locator = page.locator("[data-test='error']")
 
     def open(self) -> None:
         self.navigate("/")

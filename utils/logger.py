@@ -1,7 +1,6 @@
 import logging
 from pathlib import Path
 
-
 LOG_DIRECTORY = Path("reports/logs")
 LOG_DIRECTORY.mkdir(parents=True, exist_ok=True)
 

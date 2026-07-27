@@ -7,9 +7,7 @@ class CartPage(BasePage):
     def __init__(self, page: Page) -> None:
         super().__init__(page)
 
-        self.cart_items: Locator = page.locator(
-            "[data-test='inventory-item']"
-        )
+        self.cart_items: Locator = page.locator("[data-test='inventory-item']")
         self.checkout_button: Locator = page.get_by_role(
             "button",
             name="Checkout",
@@ -19,6 +17,4 @@ class CartPage(BasePage):
         self.checkout_button.click()
 
     def product(self, product_name: str) -> Locator:
-        return self.cart_items.filter(
-            has_text=product_name
-        )
+        return self.cart_items.filter(has_text=product_name)
