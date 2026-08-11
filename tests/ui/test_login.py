@@ -32,7 +32,7 @@ def test_standard_user_can_log_in(
 
     with allure.step("Verify the product page is displayed"):
         expect(page).to_have_url(f"{settings.ui_base_url}/inventory.html")
-        expect(products_page.title).to_have_text("Wrong Title")
+        expect(products_page.title).to_have_text("Products")
 
 
 @pytest.mark.ui
