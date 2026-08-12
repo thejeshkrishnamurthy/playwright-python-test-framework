@@ -3,18 +3,16 @@ $ErrorActionPreference = "Stop"
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 Set-Location $ProjectRoot
 
-Write-Host "Initialising database..."
+Write-Host "Running Playwright smoke pipeline..."
 
-python database\initialise_database.py
+python -m ruff check .
 
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
-Write-Host "Running Chromium regression..."
-
 python -m pytest `
-    -m "regression or integration or bdd or accessibility" `
+    -m "smoke or api" `
     --browser chromium `
     -n 2 `
     -v
@@ -24,4 +22,4 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host ""
-Write-Host "Regression pipeline PASSED."
+Write-Host "Smoke pipeline PASSED."

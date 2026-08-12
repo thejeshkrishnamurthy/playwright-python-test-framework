@@ -173,7 +173,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.875, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [1.0, 500, 1500, "02 - Get Created Booking"], "isController": false}, {"data": [0.75, 500, 1500, "01 - Create Booking"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.9, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [1.0, 500, 1500, "02 - Get Created Booking"], "isController": false}, {"data": [0.8, 500, 1500, "01 - Create Booking"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -187,7 +187,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 20, 0, 0.0, 271.45, 111, 1192, 139.5, 584.3000000000001, 1161.7999999999997, 1192.0, 4.159733777038269, 3.7860076955074877, 1.335055181468386], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["02 - Get Created Booking", 10, 0, 0.0, 134.5, 119, 179, 130.5, 176.10000000000002, 179.0, 179.0, 2.8910089621277826, 2.588638786498988, 0.6182919557675629], "isController": false}, {"data": ["01 - Create Booking", 10, 0, 0.0, 408.4, 111, 1192, 352.0, 1131.6000000000004, 1192.0, 1192.0, 2.144542140253056, 1.9834920517906927, 0.9179226758524555], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 20, 0, 0.0, 259.05, 109, 925, 136.5, 589.9, 908.2499999999998, 925.0, 4.100041000410004, 3.722869259942599, 1.3158969480319802], "isController": false}, "titles": ["Label", "#Samples", "FAIL", "Error %", "Average", "Min", "Max", "Median", "90th pct", "95th pct", "99th pct", "Transactions/s", "Received", "Sent"], "items": [{"data": ["02 - Get Created Booking", 10, 0, 0.0, 139.70000000000002, 111, 193, 135.0, 192.0, 193.0, 193.0, 2.5833118057349522, 2.3090872029191423, 0.5524856303280806], "isController": false}, {"data": ["01 - Create Booking", 10, 0, 0.0, 378.4, 109, 925, 318.0, 891.5000000000001, 925.0, 925.0, 2.100840336134454, 1.9373276654411766, 0.8992171087184875], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
